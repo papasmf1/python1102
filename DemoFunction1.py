@@ -40,3 +40,31 @@ lst = [1,2,3]
 print( id(lst) )
 lst.append(4)
 print( id(lst) )
+
+#참조를 통해서 인자를 전달
+def change(x):
+    #함수 내부에 복사본을 만들어서 작업(Deep Copy)
+    x1 = x[:]
+    x1[0] = "H"
+    print("함수내부:", x1)
+
+#함수를 호출
+wordlist = ["J","A","M"]
+#참조가 복사되서 인자가 전달되었기 때문에 원본이 수정된다.~~ 
+change(wordlist)
+print(wordlist)
+
+#전역변수와 지역변수 
+x = 1 
+def func(a):
+    return x+a 
+
+#함수 호출
+print( func(1) )
+
+def func2(a):
+    x = 5 
+    return x+a 
+
+#함수 호출
+print( func2(1) )
