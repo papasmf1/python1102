@@ -36,6 +36,14 @@ print(bool("demo"))
 print(bool([1,2,3]))
 print(bool([]))
 
+#파이썬의 판단 근거
+print(bool(0))
+print(bool(1))
+print(bool(""))
+print(bool("demo"))
+print(bool([1,2,3]))
+print(bool([]))
+
 #얕은 복사
 a = [1,2,3]
 b = a 
@@ -47,8 +55,9 @@ print(id(a), id(b))
 print("---깊은복사---")
 a = [1,2,3]
 #리스트 객체를 전체를 복사해 달라~~ 
-b = a[:] 
 a[0] = 38
+b = a[:] 
+a[1] = 20 
 print(a)
 print(b)
 print(id(a), id(b))
