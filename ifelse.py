@@ -1,10 +1,9 @@
 # ifelse.py
 
 #반복구문 
-print("---ctrl+c를 클릭하면 종료---")
+print("---ctrl+c를 클릭 종료---")
 while True:
     score = int(input("점수를 입력:"))
-
     if 90 <= score <= 100:
         grade = "A"
     elif 80 <= score < 90:
@@ -13,7 +12,6 @@ while True:
         grade = "C"
     else:
         grade = "D"
-
     print("등급은 ", grade)
 
 
