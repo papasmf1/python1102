@@ -44,13 +44,25 @@ for i in range(1,11):
 
 lst = [1,2,3,4,5,6,7,8,9,10]
 for i in lst:
+    #다중 라인 주석처리: ctrl + / 
     if i > 5:
         break 
     print("item:{0}".format(i))
+
 
 print("---continue---")
 for i in lst:
     if i % 2 == 0:
         continue 
     print("item:{0}".format(i))
+
+#수열함수
+result = list(range(2000, 2022))
+print(result)
+day = list(range(1,32))
+print(day)
+
+#for ~ in ==> for 루프
+for i in range(10):
+    print(i)
 
