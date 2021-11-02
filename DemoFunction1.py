@@ -20,11 +20,11 @@ def intersect(prelist, postlist):
     result = []
     #H(0) | A(1) | M(2)
     for x in prelist:
-        #x라는 글자가 postlist에 있고 그리고 x가 아직 result에는 없고 
+        #x라는 글자가 postlist에 있으면서 그리고 x가 아직 result에는 없고 
         if x in postlist and x not in result:
             result.append(x)
     return result 
 
 #함수를 호출
-print( intersect("HAM","SPAM"))
+print( intersect("HAM","SPAM") )
 
