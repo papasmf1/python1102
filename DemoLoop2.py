@@ -8,4 +8,3 @@ print(result)
 
 d = {100:"apple", 200:"kiwi"}
 print( [v.upper() for v in d.values()] )
-
