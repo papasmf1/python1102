@@ -31,3 +31,9 @@ print("---값를 출력---")
 for v in d.values():
     print(v)
 
+
+for i in [2,3,4,5,6]:
+    print("---{0}단---".format(i))
+    for j in [1,2,3,4,5,6,7,8,9]:
+        print("{0} * {1} = {2}".format(i, j, i*j))
+
