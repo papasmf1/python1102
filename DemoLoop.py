@@ -23,6 +23,11 @@ d = {"apple":100, "kiwi":200, "orange":300}
 for item in d.items():
     print(item)
 
+print("---키를 출력---")
+for k in d.keys():
+    print(k)
 
-
+print("---값를 출력---")
+for v in d.values():
+    print(v)
 
