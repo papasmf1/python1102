@@ -6,4 +6,5 @@ phone = tel
 
 print(tel)
 print(phone)
+print(tel)
 
