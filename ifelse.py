@@ -1,7 +1,7 @@
 # ifelse.py
 
 #반복구문 
-print("---ctrl-c를 클릭하면 종료---")
+print("---ctrl+c를 클릭하면 종료---")
 while True:
     score = int(input("점수를 입력:"))
 
