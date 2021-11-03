@@ -44,7 +44,14 @@ def userURIBuilder(server, port, **user):
 
 #호출
 print( userURIBuilder("credu.com","80", id="kim", passwd="1234") )
-print( userURIBuilder("credu.com","80", id="kim", passwd="1234",
+print( userURIBuilder("credu.com","80", id="kim", passwd="1234", 
     name="mike", age="30"))
-    
+
+#람다함수:이름이 없는 간결한 함수정의 문법
+g = lambda x,y:x*y
+print( g(3,4) )
+print( g(5,6) )
+
+print( (lambda x:x*x)(3) )
+print( globals() )
 
