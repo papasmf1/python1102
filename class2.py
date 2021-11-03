@@ -14,8 +14,19 @@ class Person:
 #2)인스턴스 생성
 p1 = Person()
 p2 = Person()
+p3 = Person() 
 
 #인스턴스 갯수 확인
 print("몇개:", Person.num_person)
 
+#런타임(코드가 실행중)시에 변수를 추가(동적인 형식의 언어)
+#디자인타임(개발하고 있는 시점)
+Person.title = "new title"
+print( p1.title )
+print( p2.title )
+print( Person.title )
 
+#인스턴스에 추가
+p1.age = 30 
+print( p1.age )
+#print( p2.age )
