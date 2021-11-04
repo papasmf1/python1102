@@ -17,3 +17,16 @@ print( f.tell() )
 f.seek(0)
 result = f.read() 
 print( result )
+print("---리스트로 받기----")
+f.seek(0)
+lst = f.readlines()
+print(lst)
+
+#파일 닫았나? 
+if f.closed:
+    print("파일을 닫았습니다.")
+else:
+    f.close() 
+
+
+
