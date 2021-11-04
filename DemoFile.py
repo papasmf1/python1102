@@ -28,5 +28,10 @@ if f.closed:
 else:
     f.close() 
 
+#서식지정문자 헥사값(16진수), 이진수... 엑셀서식(화폐)
+print("{0:x}".format(10))
+print("{0:b}".format(10))
+print("{0:,}".format(15000))
+
 
 
