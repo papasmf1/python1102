@@ -4,19 +4,26 @@ import urllib.request
 #웹크롤링 
 from bs4 import BeautifulSoup
 
-#패키지명.파일명.함수명 
-data = urllib.request.urlopen("http://comic.naver.com/webtoon/list.nhn?titleId=20853&weekday=fri")
+#파일에 저장
+f = open("c:\\work\\webtoon.txt", "wt", encoding="utf-8")
+#수열함수로 페이지 번호를 1 ~ 5생성
+for i in range(1,6):
+    url = "https://comic.naver.com/webtoon/list?titleId=20853&weekday=fri&page=" + str(i)
+    print(url)
+    data = urllib.request.urlopen(url)
 
-#검색이 용이한 객체를 생성
-soup = BeautifulSoup(data, "html.parser")
-# 다중라인: ctrl + / 
-# <td class="title">
-# 				<a href="/webtoon/detail?titleId=20853&no=50&weekday=fri" onclick="nclk_v2(event,'lst.title','20853','50')">마음의 소리 50화 &lt;격렬한 나의 하루&gt;</a>
-# 						</td>
-cartoons = soup.find_all("td", class_="title")
-title = cartoons[0].find("a").text 
-link = cartoons[0].find("a")["href"]
-print(title)
-print(link)
+    #검색이 용이한 객체를 생성
+    soup = BeautifulSoup(data, "html.parser")
 
-                        
+    cartoons = soup.find_all("td", class_="title")
+
+    #반복해서 가져오기
+    for tag in cartoons:
+        title = tag.find("a").text 
+        print( title.strip() ) 
+        f.write(title.strip() + "\n")  
+
+f.close() 
+ 
+
+         
